@@ -17,3 +17,6 @@ Cómo aplicarlo:
 5. Haz commit: Mejoras SEO precios y páginas internas.
 6. Haz Sync/Push.
 7. En Google Search Console vuelve a enviar sitemap.xml si lo deseas.
+
+
+V4: Se agregó servicio de páginas web para negocios, página interna paginas-web-negocios.html y sitemap actualizado.
