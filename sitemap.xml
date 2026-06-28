@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://www.jgsoporteti.com/</loc>
+    <lastmod>2026-06-28</lastmod>
     <priority>1.00</priority>
   </url>
-
+  <url>
+    <loc>https://www.jgsoporteti.com/formateo-laptop-lima.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jgsoporteti.com/laptop-lenta-lima.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jgsoporteti.com/mantenimiento-pc-lima.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jgsoporteti.com/instalacion-windows-office.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jgsoporteti.com/soporte-remoto-pc.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>

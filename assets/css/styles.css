@@ -702,3 +702,349 @@ h1 span,
     grid-template-columns: 1fr;
   }
 }
+
+
+/* === V3: conversión, precios, SEO pages === */
+.section-compact {
+  padding: 56px 0;
+}
+
+.problem-grid,
+.link-grid,
+.price-grid,
+.steps-grid,
+.faq-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.problem-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.problem-card,
+.link-card,
+.price-card,
+.step-card,
+.faq-grid details,
+.page-panel,
+.page-service-card {
+  background: linear-gradient(180deg, rgba(13, 30, 61, 0.86), rgba(6, 17, 34, 0.92));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.problem-card {
+  min-height: 96px;
+  padding: 20px;
+  color: #dcecff;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: 0.2s ease;
+}
+
+.problem-card:hover,
+.link-card:hover,
+.page-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(36, 216, 255, 0.42);
+}
+
+.problem-card span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(36, 216, 255, 0.08);
+  border: 1px solid var(--line);
+}
+
+.section-links {
+  padding-top: 0;
+}
+
+.link-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.link-card {
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+  transition: 0.2s ease;
+}
+
+.link-card strong {
+  color: var(--cyan);
+  line-height: 1.2;
+}
+
+.link-card span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.prices-section {
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  background: rgba(255, 255, 255, 0.016);
+}
+
+.price-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.price-card {
+  position: relative;
+  padding: 24px;
+  min-height: 245px;
+}
+
+.price-card.featured {
+  border-color: rgba(33, 209, 107, 0.55);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35), 0 0 36px rgba(33, 209, 107, 0.08);
+}
+
+.price-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(33, 209, 107, 0.14);
+  color: #b6ffd0;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid rgba(33, 209, 107, 0.35);
+}
+
+.price-card h3 {
+  color: var(--cyan);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.price-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.price-card strong {
+  display: block;
+  color: white;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.price-card small {
+  color: #8fa4c4;
+}
+
+.price-note {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  color: var(--muted);
+  border: 1px solid var(--line-soft);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.steps-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.step-card {
+  padding: 22px;
+}
+
+.step-card span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--green), #17b8ff);
+  color: white;
+  font-weight: 900;
+}
+
+.step-card h3 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.faq-section {
+  border-top: 1px solid var(--line-soft);
+}
+
+.faq-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.faq-grid details {
+  padding: 20px 22px;
+}
+
+.faq-grid summary {
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.faq-grid p {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* páginas internas */
+.page-hero {
+  position: relative;
+  padding: 72px 0 46px;
+  border-bottom: 1px solid var(--line-soft);
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(36, 216, 255, 0.15), transparent 25%),
+    linear-gradient(115deg, transparent 0 25%, rgba(36,216,255,.10) 25% 25.2%, transparent 25.5% 100%);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(36px, 4vw, 58px);
+}
+
+.page-hero p {
+  color: var(--muted);
+  font-size: 17px;
+  max-width: 780px;
+}
+
+.breadcrumbs {
+  color: var(--muted);
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  color: var(--cyan);
+}
+
+.page-panel {
+  padding: 24px;
+}
+
+.page-panel h2 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.page-panel ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  color: var(--muted);
+}
+
+.page-panel li::before {
+  content: "✓";
+  color: #8dffb6;
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+.page-content {
+  padding: 64px 0;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.page-service-card {
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.page-service-card h2,
+.page-service-card h3 {
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
+
+.page-service-card p,
+.page-service-card li {
+  color: var(--muted);
+}
+
+.page-service-card ul,
+.page-service-card ol {
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar-cta {
+  position: sticky;
+  top: 106px;
+}
+
+@media (max-width: 1120px) {
+  .link-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .problem-grid,
+  .price-grid,
+  .faq-grid,
+  .page-hero .container,
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-cta {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .link-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
