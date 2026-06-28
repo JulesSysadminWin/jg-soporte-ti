@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://julessysadminwin.github.io/jg-soporte-ti/sitemap.xml
+Sitemap: https://www.jgsoporteti.com/sitemap.xml
