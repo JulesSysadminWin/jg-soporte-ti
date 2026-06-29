@@ -1496,3 +1496,99 @@ h1 span,
     height: 40px;
   }
 }
+
+
+/* === V7 HOTFIX MOBILE ===
+   Corrección fuerte para evitar duplicados de WhatsApp y overflow horizontal en móviles. */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-cta::before,
+.nav-cta::after,
+.floating-whatsapp::before,
+.floating-whatsapp::after {
+  content: none !important;
+}
+
+.nav-cta-full,
+.nav-cta-short {
+  display: none !important;
+}
+
+@media (max-width: 860px) {
+  .site-header {
+    overflow: visible;
+  }
+
+  .nav {
+    grid-template-columns: minmax(0, 1fr) auto auto !important;
+    gap: 8px !important;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-copy {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand-copy strong {
+    display: block;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .brand-copy span {
+    display: none;
+  }
+
+  .nav-cta {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    max-width: 116px;
+    min-height: 42px;
+    padding: 0 12px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px !important;
+    line-height: 1 !important;
+  }
+
+  .mobile-menu-toggle {
+    flex: 0 0 auto;
+  }
+
+  .floating-whatsapp {
+    display: none !important;
+  }
+
+  .section-title h2 {
+    font-size: clamp(27px, 8.2vw, 36px) !important;
+    overflow-wrap: break-word;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-copy strong {
+    max-width: 86px;
+  }
+
+  .nav-cta {
+    max-width: 98px;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+}
