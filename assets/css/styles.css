@@ -1361,3 +1361,138 @@ h1 span,
     font-size: 14px;
   }
 }
+
+/* === V6: Menú móvil con hamburguesa y CTA sin duplicado === */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.nav-cta-short {
+  display: none;
+}
+
+.nav-cta-full {
+  display: inline;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    min-height: 64px;
+    padding: 8px 0;
+    gap: 8px;
+  }
+
+  .nav-cta {
+    display: inline-flex !important;
+    width: auto !important;
+    min-width: 0;
+    min-height: 42px;
+    padding: 0 13px !important;
+    border-radius: 13px;
+    font-size: 13px !important;
+    line-height: 1;
+  }
+
+  .nav-cta::after {
+    content: none !important;
+  }
+
+  .nav-cta-full {
+    display: none;
+  }
+
+  .nav-cta-short {
+    display: inline;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(36, 216, 255, 0.24);
+    border-radius: 13px;
+    background: rgba(8, 19, 39, 0.82);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 2px 0;
+    border-radius: 999px;
+    background: #d7e7ff;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    display: none;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 10px;
+    border: 1px solid rgba(36, 216, 255, 0.18);
+    border-radius: 18px;
+    background: rgba(4, 10, 22, 0.98);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(18px);
+  }
+
+  .site-header.is-open .menu {
+    display: grid;
+  }
+
+  .menu a {
+    display: block;
+    padding: 13px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .menu a:hover,
+  .menu a.active {
+    background: rgba(36, 216, 255, 0.08);
+  }
+
+  .site-header.is-open .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .site-header.is-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header.is-open .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* En móvil evitamos duplicar WhatsApp: ya está en header y en el hero. */
+  .floating-whatsapp {
+    display: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-copy strong {
+    font-size: 13px;
+  }
+
+  .nav-cta {
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}

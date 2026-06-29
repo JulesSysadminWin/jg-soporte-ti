@@ -1,5 +1,34 @@
 console.log("JG Soporte TI cargado correctamente");
 
+// Menú móvil tipo hamburguesa.
+const header = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".mobile-menu-toggle");
+const menuLinks = document.querySelectorAll(".menu a");
+
+if (header && menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Abrir menú");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      header.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Abrir menú");
+    }
+  });
+}
+
 // Resalta el enlace del menú según la sección visible. Ignora enlaces externos o páginas internas.
 const links = document.querySelectorAll(".menu a");
 const sectionLinks = [...links].filter(link => (link.getAttribute("href") || "").startsWith("#"));
