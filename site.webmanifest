@@ -1,0 +1,25 @@
+{
+  "name": "JG Soporte TI",
+  "short_name": "JG Soporte TI",
+  "description": "Soporte técnico para PC, laptops, soporte remoto y páginas web para negocios en Lima.",
+  "lang": "es-PE",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#020b14",
+  "theme_color": "#061426",
+  "icons": [
+    {
+      "src": "/assets/img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
