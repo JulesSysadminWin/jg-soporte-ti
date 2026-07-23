@@ -1,241 +1,113 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-PE">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laptop lenta en Lima | Diagnóstico y optimización de PC</title>
-  <meta name="description" content="Diagnóstico para laptop lenta en Lima y remoto. Revisión de CPU, RAM, disco, programas de inicio, drivers, errores y recomendaciones de mejora." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="author" content="JG Soporte TI" />
-  <meta name="theme-color" content="#061426" />
-  <meta name="color-scheme" content="dark light" />
-  <link rel="canonical" href="https://www.jgsoporteti.com/laptop-lenta-lima.html" />
-
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
-
-  <meta property="og:locale" content="es_PE" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="JG Soporte TI" />
-  <meta property="og:title" content="Laptop lenta en Lima | Diagnóstico y optimización de PC" />
-  <meta property="og:description" content="Diagnóstico para laptop lenta en Lima y remoto. Revisión de CPU, RAM, disco, programas de inicio, drivers, errores y recomendaciones de mejora." />
-  <meta property="og:url" content="https://www.jgsoporteti.com/laptop-lenta-lima.html" />
-  <meta property="og:image" content="https://www.jgsoporteti.com/assets/img/og-image-jg-soporte-ti.png" />
-  <meta property="og:image:secure_url" content="https://www.jgsoporteti.com/assets/img/og-image-jg-soporte-ti.png" />
-  <meta property="og:image:alt" content="Logo de JG Soporte TI" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Laptop lenta en Lima | Diagnóstico y optimización de PC" />
-  <meta name="twitter:description" content="Diagnóstico para laptop lenta en Lima y remoto. Revisión de CPU, RAM, disco, programas de inicio, drivers, errores y recomendaciones de mejora." />
-  <meta name="twitter:image" content="https://www.jgsoporteti.com/assets/img/og-image-jg-soporte-ti.png" />
-
-  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": [
-        "LocalBusiness",
-        "ProfessionalService"
-      ],
-      "@id": "https://www.jgsoporteti.com/#negocio",
-      "name": "JG Soporte TI",
-      "alternateName": "JG Soporte TI - Soporte técnico y servicios TI",
-      "url": "https://www.jgsoporteti.com/",
-      "logo": "https://www.jgsoporteti.com/assets/img/logo-jg-soporte-ti.png",
-      "image": "https://www.jgsoporteti.com/assets/img/logo-jg-soporte-ti.png",
-      "telephone": "+51936480770",
-      "priceRange": "S/30 - S/800+",
-      "description": "Soporte técnico para PC, laptops y pequeñas empresas en Lima. Formateo, Windows, Office, drivers, limpieza de software, diagnóstico de lentitud, soporte remoto, páginas web para negocios, SEO técnico y servicios TI empresariales.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lima",
-        "addressRegion": "Lima",
-        "addressCountry": "PE"
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Lima"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Callao"
-        },
-        {
-          "@type": "Country",
-          "name": "Perú"
-        }
-      ],
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+51936480770",
-          "contactType": "customer support",
-          "areaServed": "PE",
-          "availableLanguage": [
-            "es"
-          ]
-        }
-      ],
-      "sameAs": [
-        "https://www.jgsoporteti.com/"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.jgsoporteti.com/#website",
-      "url": "https://www.jgsoporteti.com/",
-      "name": "JG Soporte TI",
-      "inLanguage": "es-PE",
-      "publisher": {
-        "@id": "https://www.jgsoporteti.com/#negocio"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.jgsoporteti.com/laptop-lenta-lima.html#webpage",
-      "url": "https://www.jgsoporteti.com/laptop-lenta-lima.html",
-      "name": "Laptop lenta en Lima | Diagnóstico y optimización de PC",
-      "description": "Diagnóstico para laptop lenta en Lima y remoto. Revisión de CPU, RAM, disco, programas de inicio, drivers, errores y recomendaciones de mejora.",
-      "isPartOf": {
-        "@id": "https://www.jgsoporteti.com/#website"
-      },
-      "about": {
-        "@id": "https://www.jgsoporteti.com/#negocio"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://www.jgsoporteti.com/assets/img/logo-jg-soporte-ti.png"
-      },
-      "inLanguage": "es-PE"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.jgsoporteti.com/laptop-lenta-lima.html#service",
-      "name": "Diagnóstico y optimización de laptop lenta",
-      "serviceType": "Diagnóstico y optimización de laptop lenta",
-      "description": "Diagnóstico para laptop lenta en Lima y remoto. Revisión de CPU, RAM, disco, programas de inicio, drivers, errores y recomendaciones de mejora.",
-      "provider": {
-        "@id": "https://www.jgsoporteti.com/#negocio"
-      },
-      "areaServed": [
-        "Lima",
-        "Callao",
-        "Perú remoto"
-      ],
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceUrl": "https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20soporte%20t%C3%A9cnico.",
-        "availableLanguage": "es"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.jgsoporteti.com/laptop-lenta-lima.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Inicio",
-          "item": "https://www.jgsoporteti.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Solución para laptop lenta en Lima",
-          "item": "https://www.jgsoporteti.com/laptop-lenta-lima.html"
-        }
-      ]
-    }
-  ]
-}
-  </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Solución para laptop lenta | JG Soporte TI</title>
+<meta name="description" content="Diagnóstico de lentitud, limpieza de software, revisión de inicio, espacio, procesos y recomendaciones." />
+<meta name="keywords" content="laptop lenta Lima, PC lenta Lima, optimizar laptop Lima" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="JG Soporte TI" />
+<meta name="theme-color" content="#07111f" />
+<meta name="color-scheme" content="dark light" />
+<link rel="canonical" href="https://www.jgsoporteti.com/laptop-lenta-lima.html" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192x192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
+<meta property="og:locale" content="es_PE" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="JG Soporte TI" />
+<meta property="og:title" content="Solución para laptop lenta | JG Soporte TI" />
+<meta property="og:description" content="Diagnóstico de lentitud, limpieza de software, revisión de inicio, espacio, procesos y recomendaciones." />
+<meta property="og:url" content="https://www.jgsoporteti.com/laptop-lenta-lima.html" />
+<meta property="og:image" content="https://www.jgsoporteti.com/assets/img/og-image-jg-soporte-ti.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Solución para laptop lenta | JG Soporte TI" />
+<meta name="twitter:description" content="Diagnóstico de lentitud, limpieza de software, revisión de inicio, espacio, procesos y recomendaciones." />
+<meta name="twitter:image" content="https://www.jgsoporteti.com/assets/img/og-image-jg-soporte-ti.png" />
+<link rel="stylesheet" href="assets/css/styles.css?v=11" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Solución para laptop lenta","provider":{"@type":"LocalBusiness","name":"JG Soporte TI","url":"https://www.jgsoporteti.com/"},"areaServed":"Lima, Perú","description":"Diagnóstico de lentitud, limpieza de software, revisión de inicio, espacio, procesos y recomendaciones."}</script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html#inicio" aria-label="Inicio JG Soporte TI">
-        <img src="assets/img/logo-icon-jg.png" alt="Logo JG Soporte TI" class="brand-logo" width="54" height="54" decoding="async" />
-        <div class="brand-copy"><strong>JG Soporte TI</strong><span>Soporte técnico & servicios TI</span></div>
-      </a>
-      <nav class="menu" aria-label="Menú principal">
-        <a href="index.html#problemas">Problemas</a>
-        <a href="index.html#pc-laptop">PC/Laptop</a>
-        <a href="index.html#webs">Webs</a>
-        <a href="index.html#seo">SEO</a>
-        <a href="index.html#precios">Precios</a>
-        <a href="index.html#empresas">Empresas</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
-      <a class="btn btn-whatsapp nav-cta" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20soporte%20t%C3%A9cnico." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">WhatsApp</a>
-      <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div>
-          <div class="breadcrumbs"><a href="index.html">Inicio</a> / Solución para laptop lenta</div>
-          <p class="eyebrow">JG Soporte TI</p>
-          <h1>Solución para laptop lenta</h1>
-          <p>Si tu laptop demora en iniciar, se congela o trabaja al 100% de disco, se revisa el rendimiento antes de recomendar formateo o cambio de componentes.</p>
-          <div class="hero-actions"><a class="btn btn-whatsapp" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20soporte%20t%C3%A9cnico." target="_blank" rel="noopener">Consultar por WhatsApp</a><a class="btn btn-outline" href="index.html#precios">Ver precios referenciales</a></div>
-        </div>
-        <aside class="page-panel">
-          <h2>Incluye según evaluación</h2>
-          <ul><li>CPU, RAM y disco</li>
-<li>Programas de inicio</li>
-<li>Errores de Windows</li>
-<li>Drivers</li>
-<li>Recomendaciones de mejora</li></ul>
-        </aside>
-      </div>
-    </section>
+<div class="page-glow"></div>
+<canvas id="heroCanvas" aria-hidden="true"></canvas>
 
-    <section class="page-content">
-      <div class="container page-grid">
-        <div>
-          <article class="page-service-card">
-            <h2>Qué reviso</h2>
-            <p>Valido consumo de recursos, estado del disco, memoria RAM, temperatura, programas innecesarios, errores de Windows y controladores.</p>
-            <ul><li>Optimización sin formateo cuando aplica.</li><li>Recomendación de SSD/RAM si el equipo lo requiere.</li><li>Revisión remota o presencial según el caso.</li></ul>
-          </article>
-          <article class="page-service-card">
-            <h2>Precio referencial</h2>
-            <p>El diagnóstico remoto inicia desde S/ 30 y la limpieza/optimización desde S/ 50.</p>
-            <p>Si se requiere formateo, respaldo o visita presencial, se cotiza aparte.</p>
-          </article>
-        </div>
-        <aside class="page-panel sidebar-cta">
-          <h2>¿Necesitas ayuda?</h2>
-          <p style="color: var(--muted); margin-bottom: 18px;">Envíame el modelo del equipo, el problema y si prefieres atención remota o presencial.</p>
-          <a class="btn btn-whatsapp" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20soporte%20t%C3%A9cnico." target="_blank" rel="noopener">Escribir por WhatsApp</a>
-        </aside>
-      </div>
-    </section>
-  </main>
-  <a class="floating-whatsapp" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20soporte%20t%C3%A9cnico." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
-  <footer class="footer">
-    <div class="container footer-layout">
-      <a class="footer-brand" href="index.html#inicio"><img src="assets/img/logo-icon-jg.png" alt="Logo JG Soporte TI" loading="lazy" decoding="async" /><span>JG Soporte TI</span></a>
-      <nav class="footer-links" aria-label="Enlaces informativos">
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#proceso">Proceso</a>
-        <a href="index.html#seo">SEO</a>
-        <a href="index.html#sobre-mi">Sobre mí</a>
-      </nav>
-      <p>Lima, Perú · Servicio técnico independiente · RUC activo · www.jgsoporteti.com</p>
+<header class="site-header" data-header>
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
+      <img src="assets/img/logo-icon-jg.png" alt="JG Soporte TI" width="46" height="46" />
+      <span><b>JG Soporte TI</b><small>Soporte técnico & servicios TI</small></span>
+    </a>
+    <nav class="main-nav" data-nav aria-label="Menú principal">
+      
+<a href="index.html#servicios">Servicios</a>
+<a href="index.html#precios">Precios</a>
+<a href="index.html#negocios">Negocios</a>
+<a href="index.html#proceso">Proceso</a>
+<a href="index.html#faq">FAQ</a>
+
+      <a class="nav-pill" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20cotizar%20un%20servicio." target="_blank" rel="noopener">Cotizar</a>
+    </nav>
+    <a class="header-wa" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20cotizar%20un%20servicio." target="_blank" rel="noopener">WhatsApp</a>
+    <button class="menu-toggle" data-menu-toggle type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="inner-hero">
+  <div class="container inner-grid">
+    <div class="reveal">
+      <a class="back-link" href="index.html#servicios">← Volver a servicios</a>
+      <p class="eyebrow">Optimización</p>
+      <h1>Solución para laptop lenta</h1>
+      <p>Reviso qué está consumiendo recursos y te indico la mejor opción antes de hacer cambios innecesarios.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20cotizar%20un%20servicio." target="_blank" rel="noopener">Cotizar este servicio</a><a class="btn btn-ghost" href="index.html#precios">Ver precios</a></div>
     </div>
-  </footer>
-  <script src="assets/js/main.js?v=10" defer></script>
+    <div class="inner-card reveal" data-tilt><span>◴</span><h2>Desde S/ 50</h2><p>El diagnóstico define si conviene optimizar, formatear o mejorar hardware.</p></div>
+  </div>
+</section>
+<section class="section detail-section">
+  <div class="container detail-grid">
+    <article class="detail-main reveal">
+      <h2>Qué incluye</h2>
+      <ul class="check-list"><li>Revisión de programas de inicio.</li><li>Validación de disco, memoria y consumo.</li><li>Limpieza de software y archivos temporales.</li><li>Recomendaciones claras si requiere upgrade.</li></ul>
+      <div class="license-note"><b>Importante:</b> El diagnóstico define si conviene optimizar, formatear o mejorar hardware.</div>
+    </article>
+    <aside class="detail-side reveal">
+      <h3>También podría interesarte</h3>
+      <div class="related-links"><a href="formateo-laptop-lima.html">Formateo</a><a href="mantenimiento-pc-lima.html">Mantenimiento</a><a href="instalacion-windows-office.html">Windows y Office</a><a href="soporte-remoto-pc.html">Soporte remoto</a></div>
+      <a class="btn btn-primary full" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20cotizar%20un%20servicio." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer" id="contacto">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="index.html#inicio">
+        <img src="assets/img/logo-icon-jg.png" alt="JG Soporte TI" width="48" height="48" />
+        <span><b>JG Soporte TI</b><small>Soporte técnico & servicios TI</small></span>
+      </a>
+      <p>Atención remota y presencial previa coordinación en Lima, Perú.</p>
+      <div class="footer-actions">
+        <a class="btn btn-primary" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20cotizar%20un%20servicio." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.jgsoporteti.com/" target="_blank" rel="noopener">www.jgsoporteti.com</a>
+      </div>
+    </div>
+    <div class="qr-card">
+      <img src="assets/img/qr-whatsapp-jg.png" alt="QR para solicitar cotización por WhatsApp" width="168" height="168" loading="lazy" />
+      <span>Escanea y solicita una cotización</span>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 JG Soporte TI</span>
+    <span>Windows · Office · Drivers · Soporte remoto · Páginas web · SEO técnico</span>
+  </div>
+</footer>
+<a class="floating-wa" href="https://wa.me/51936480770?text=Hola%20JG%20Soporte%20TI%2C%20necesito%20cotizar%20un%20servicio." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">✆</a>
+
+<script src="assets/js/main.js?v=11" defer></script>
 </body>
 </html>
