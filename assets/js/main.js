@@ -1,50 +1,59 @@
-console.log("JG Soporte TI cargado correctamente");
+(() => {
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.menu');
 
-// Menú móvil tipo hamburguesa.
-const header = document.querySelector(".site-header");
-const menuToggle = document.querySelector(".mobile-menu-toggle");
-const menuLinks = document.querySelectorAll(".menu a");
-
-if (header && menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = header.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
-  });
-
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      header.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Abrir menú");
+  if (header && toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = header.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      header.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Abrir menú");
-    }
-  });
-}
-
-// Resalta el enlace del menú según la sección visible. Ignora enlaces externos o páginas internas.
-const links = document.querySelectorAll(".menu a");
-const sectionLinks = [...links].filter(link => (link.getAttribute("href") || "").startsWith("#"));
-const sections = sectionLinks
-  .map(link => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
-
-if (sections.length) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      sectionLinks.forEach(link => link.classList.remove("active"));
-      const active = document.querySelector(`.menu a[href="#${entry.target.id}"]`);
-      if (active) active.classList.add("active");
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        header.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
-  }, { threshold: 0.35 });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        header.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
-  sections.forEach(section => observer.observe(section));
-}
+  const links = document.querySelectorAll('.menu a[href^="#"], .menu a[href^="index.html#"]');
+  const sectionLinks = [...links].filter(link => {
+    const href = link.getAttribute('href') || '';
+    const id = href.includes('#') ? href.split('#').pop() : '';
+    return id && document.getElementById(id);
+  });
+  const sections = sectionLinks.map(link => document.getElementById((link.getAttribute('href') || '').split('#').pop())).filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      sectionLinks.forEach(link => link.classList.remove('active'));
+      const activeId = visible.target.id;
+      sectionLinks.forEach(link => {
+        if ((link.getAttribute('href') || '').endsWith('#' + activeId)) link.classList.add('active');
+      });
+    }, { threshold: [0.25, 0.45, 0.65] });
+    sections.forEach(section => observer.observe(section));
+  }
+
+  const revealTargets = document.querySelectorAll('.service-card, .price-card, .problem-card, .step-card, .link-card, .page-service-card, .page-panel, .support-card, .about-profile, .why-card, .contact-card');
+  if ('IntersectionObserver' in window && revealTargets.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealTargets.forEach(el => el.classList.add('reveal'));
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach(el => revealObserver.observe(el));
+  }
+})();
